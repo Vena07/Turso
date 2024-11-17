@@ -1,6 +1,12 @@
+// Import potřebných modulů
 import { mysqlTable, serial, text, int } from 'drizzle-orm/mysql-core';
 
+// Definice tabulky `user`
 export const user = mysqlTable('user', {
-	id: serial('id').primaryKey(),
-	age: int('age')
+
+  // Sloupec `id`, automaticky inkrementovaný primární klíč
+  id: serial('id').primaryKey(),
+
+  // Sloupec `age`, celé číslo představující věk uživatele
+  age: int('age')
 });
